@@ -1,3 +1,3 @@
 # ajudemais
 
-Projeto para a disciplina Engenharia de Software - 6º período do curso Ciência da Computação - IFSULDEMINAS Campus Muzambinho
+Projeto do 6º período do curso Ciência da Computação - IFSULDEMINAS Campus Muzambinho
