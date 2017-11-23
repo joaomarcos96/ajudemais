@@ -1,0 +1,123 @@
+html,
+body {
+	/*height: 100%;*/
+}
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/* bottom = footer height */
+	margin: 0 0 60px;
+
+	/* para esconder a barra de rolagem horizontal */
+	overflow-x: hidden;
+
+	padding-bottom: 10px;
+}
+
+table > thead > tr > th,
+table > tbody {
+	/*text-align: center;*/
+}
+
+form label {
+	-webkit-transition: .2s ease-out;
+	transition: .2s ease-out;
+	color: #757575;
+	top: .8rem;
+	left: 0;
+	font-size: 1rem;
+	cursor: text;
+}
+
+.dropdown .dropdown-menu.dropdown-danger .dropdown-item:hover {
+	background-color: #00695c !important;
+}
+
+.obrigatorio {
+	color: #db4437;
+}
+
+.modal-dialog {
+	/*width: 40%;*/
+}
+
+#site-footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 60px;
+	width: 100%;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #333;
+	color: white;
+	text-align: center;
+}
+
+#home-footer {
+	height: 60px;
+	width: 100%;
+	margin-top: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #333;
+	color: white;
+	text-align: center;
+}
+
+/*
+	Estilos desabilitar botão para alterar e excluir produtos já doados
+*/
+.tooltip-wrapper {
+	display: inline-block;
+}
+
+.tooltip-wrapper .btn[disabled] {
+	pointer-events: none;
+}
+
+.tooltip-wrapper.disabled {
+	cursor: not-allowed;
+}
+/*
+	Fim
+*/
+
+
+/*
+	Estilos tamanho dos botões de alterar e excluir
+*/
+.config {
+	width: 5%;
+}
+/*
+	Fim
+*/
+
+
+.flex-center {
+	color: #fff;
+}
+
+.intro-1 {
+	background: url('../../assets/img/doacao.png') no-repeat center center;
+	background-size: cover;
+}
+
+.img-site {
+	height: 100%;
+	width: 100%;
+        max-height: 300px;
+	max-width: 500px;
+}
+
+.card-img {
+	max-height: 300px;
+	max-width: 300px;
+	align-self: center;
+}
