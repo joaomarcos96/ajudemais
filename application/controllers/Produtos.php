@@ -411,22 +411,30 @@ class Produtos extends CI_Controller {
             show_404();
         }
 
-        $produto = $this->produto->buscarPorId($produto_id);
+        if($this->interesse->buscarInteresse($donatario_id, $produto_id)){
 
-        $produto['status'] = 0;
+            $produto = $this->produto->buscarPorId($produto_id);
 
-        $this->produto->atualizar($produto);
+            $produto['status'] = 0;
 
-        $doacao['produto_id']           = $produto_id;
-        $doacao['usuario_doador_id']    = $this->session->userdata('usuario_id');
-        $doacao['usuario_donatario_id'] = $donatario_id;
-        $doacao['data_doacao']          = date('Y-m-d');
+            $this->produto->atualizar($produto);
 
-        $this->doacao->inserir($doacao);
+            $doacao['produto_id']           = $produto_id;
+            $doacao['usuario_doador_id']    = $this->session->userdata('usuario_id');
+            $doacao['usuario_donatario_id'] = $donatario_id;
+            $doacao['data_doacao']          = date('Y-m-d');
 
-        $this->interesse->excluirInteressesPeloProduto($produto_id);
+            $this->doacao->inserir($doacao);
 
-        definirMensagem('msg_sucesso', 'success', 'Sucesso', 'Doação realizada com sucesso.');
+            $this->interesse->excluirInteressesPeloProduto($produto_id);
+
+            definirMensagem('msg_sucesso', 'success', 'Sucesso', 'Doação realizada com sucesso.');
+        }
+        else {
+            definirMensagem('msg_erro', 'danger', 'Erro', 'O interesse neste produto não foi encontrado. Ele pode ter sido cancelado antes da doação.');
+        }
+        
+
 
         redirect(base_url('produtos/interessados'));
     }

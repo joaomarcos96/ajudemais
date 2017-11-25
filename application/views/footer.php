@@ -41,7 +41,5 @@
         */
     </script>
 
-    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSa_CZuFVTYbPuZTFIFeGgkT8RhZvl9YA&callback=initMap" type="text/javascript"></script> -->
-
     </body>
 </html>

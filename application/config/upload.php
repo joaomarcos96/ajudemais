@@ -1,7 +1,7 @@
 <?php
 
 $config = array(
-    'upload_path'   => dirname(__FILE__) . '/../../assets/img/',
+    'upload_path'   => realpath(dirname(__FILE__)) . '/../../assets/img/',
     'allowed_types' => 'jpg|png|jpeg',
     'overwrite'     => TRUE,
     'encrypt_name'  => TRUE,

@@ -26,7 +26,7 @@
 					<div class="md-form">
 						<label for="categoria">Categoria: </label><br><br>
 						<select id="categoria" class="form-control" name="categoria" required>
-							<option selected hidden>Selecione uma categoria</option>
+							<option value="" selected hidden>Selecione uma categoria</option>
 							<?php foreach ($categorias as $categoria): ?>
 									<option value=<?php echo $categoria['id'];?> <?php if($categoria['id'] == $categoria_id){ echo 'selected'; } ?>><?php echo $categoria['nome']; ?></option>
 							<?php endforeach; ?>

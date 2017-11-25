@@ -53,7 +53,7 @@
             </div>
 
             <div class="md-form">
-                <input type="number" id="numero" class="form-control" name="numero">
+                <input type="number" id="numero" class="form-control" name="numero" min="1">
                 <label for="numero">Número: </label>
             </div>
 

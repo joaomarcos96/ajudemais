@@ -19,22 +19,26 @@ class Doacoes extends CI_Controller {
     }
 
     public function index(){
-        redirect(base_url('doacoes/todas'));
+        if($this->usuario_logado_grupo == ADMINISTRADOR){
+            redirect(base_url('doacoes/todas'));
+        }
+        else {
+            redirect(base_url('doacoes/realizadas'));
+        }
     }
 
     public function todas(){
+        if($this->usuario_logado_grupo != ADMINISTRADOR){
+            show_404();
+        }
+
         $dados['grupo'] = $this->usuario_logado_grupo;
 
         $dados['doacoes'] = $this->doacao->buscarTodasDoacoes();
-
+        
         $dados['titulo'] = 'Doações';
 
-        if($this->usuario_logado_grupo == ADMINISTRADOR){
-            $dados['titulo_tabela'] = 'Todas as doações';
-        }
-        else {
-            $dados['titulo_tabela'] = 'Doações realizadas e recebidas';
-        }
+        $dados['titulo_tabela'] = 'Todas as doações';
 
         $dados['msg_nenhum_registro'] = 'Nenhuma doação realizada e nem recebida.';
 

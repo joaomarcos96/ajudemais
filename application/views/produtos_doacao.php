@@ -9,7 +9,7 @@
                 <form method="POST" action="<?php echo base_url('detalhes/filtrar/') . $interesse; ?>">
                     <label for="categoria">Categoria</label>
                     <select id="categoria" class="form-control" name="categoria">
-                        <option selected disabled>Selecione uma categoria</option>
+                        <option value="" selected disabled>Selecione uma categoria</option>
                         <?php foreach($categorias as $categoria): ?>
                             <option value=<?php echo $categoria['id']; ?>>
                                 <?php echo $categoria['nome']; ?>
@@ -19,7 +19,7 @@
 
                     <label for="estado">Estado</label>
                     <select id="estado" class="form-control" name="estado">
-                        <option selected disabled>Selecione um estado</option>
+                        <option value="" selected disabled>Selecione um estado</option>
                         <?php foreach($estados as $estado): ?>
                             <option value=<?php echo $estado['id']; ?>>
                                 <?php echo $estado['nome']; ?>
@@ -29,7 +29,7 @@
 
                     <label for="cidade">Cidade</label>
                     <select id="cidade" class="form-control" name="cidade" disabled>
-                        <option selected>Selecione uma cidade</option>
+                        <option value="" selected>Selecione uma cidade</option>
                     </select>
 
                     <br>

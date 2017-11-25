@@ -26,7 +26,7 @@
             <div class="md-form">
                 <label for="estado">Estado: </label><br><br>
                 <select id="estado" class="form-control" name="estado" required>
-                    <option selected hidden>Selecione um estado</option>
+                    <option value="" selected hidden>Selecione um estado</option>
                     <?php foreach($estados as $estado): ?>
                         <option value=<?php echo $estado['id']; ?> <?php if($estado['id'] == $estado_id){ echo 'selected'; } ?>>
                             <?php echo $estado['nome']; ?>
@@ -38,7 +38,7 @@
             <div class="md-form">
                 <label for="cidade">Cidade: </label><br><br>
                 <select id="cidade" class="form-control" name="cidade" disabled required>
-                    <option selected hidden>Selecione um estado primeiro</option>
+                    <option value="" selected hidden>Selecione um estado primeiro</option>
                 </select>
             </div>
 

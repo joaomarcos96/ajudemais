@@ -113,4 +113,19 @@ class Doacao_model extends MY_Model {
         }
     }
 
+    public function buscarDoacaoPeloProduto($produto_id){
+        $this->db->select('*')
+                 ->from($this->tabela)
+                 ->where('doacao.produto_id = ', $produto_id);
+
+        $query = $this->db->get();
+
+        if($query->num_rows() > 0){
+            return $query->row_array();
+        }
+        else {
+            return false;
+        }
+    }
+
 }

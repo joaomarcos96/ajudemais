@@ -98,7 +98,9 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right dropdown-danger" aria-labelledby="doacoes">
-                                    <a class="dropdown-item" href="<?php echo base_url('doacoes/todas'); ?>">Mostrar todas</a>
+                                    <?php  if($grupo_usuario == ADMINISTRADOR): ?>
+                                        <a class="dropdown-item" href="<?php echo base_url('doacoes/todas'); ?>">Mostrar todas</a>
+                                    <?php endif; ?>
                                     <a class="dropdown-item" href="<?php echo base_url('doacoes/realizadas'); ?>">Realizadas</a>
                                     <a class="dropdown-item" href="<?php echo base_url('doacoes/recebidas'); ?>">Recebidas</a>
                                 </div>
